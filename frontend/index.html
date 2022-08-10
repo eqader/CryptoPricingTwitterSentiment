@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<!-- To view in browser: python3 -m http.server 8080 & -->
+<!-- Then visit http://0.0.0.0:8080/interactive.html in your browser -->
+<head>
+  <title>Fire Monkeys</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <script type="text/javascript" src="lib/d3.v5.min.js"></script>
+  <script type="text/javascript" src="lib/d3-dsv.min.js"></script>
+  <script src="https://sdk.amazonaws.com/js/aws-sdk-2.1096.0.min.js"></script>
+  <!-- <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script> -->
+  <script src="./getData.js"></script>
+
+</head>
+
+<body>
+  <img src="assets/logo.PNG" alt="Fire Monkey Logo" width="400" style="float:right"> 
+
+  <h1 style="margin-left: 590px;">Select a Coin</h1>
+  <select style="margin-left: 620px;" id="coinDropdown"></select>
+
+  <h1 style="margin-left: 350px;">Select a Forecasted Sentiment for the Next Month</h1>
+  <div style="margin-left: 600px;" id="sentiment_prediction">
+    <input type="radio" name="sentiment_prediction" value="improve" checked="checked"> Sentiment improves<br>
+    <input type="radio" name="sentiment_prediction" value="same"> Sentiment stays the same<br>
+    <input type="radio" name="sentiment_prediction" value="degrade"> Sentiment degrades<br>
+  </div>
+
+  <h1 style="margin-left: 380px;">Sentiments and Prices for Cryptocoin by Time</h1>
+  <div style="margin-left: 200px;" id='plot'></div>
+
+  <div id='tweets'></div>
+
+  <script src="./plotSentiment.js"></script>
+  <script src="./addLegend.js"></script>
+
+</body>

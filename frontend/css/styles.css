@@ -1,0 +1,42 @@
+.line {
+    fill: none;
+    stroke: #ffab00;
+    stroke-width: 3;
+}
+      
+.overlay {
+    fill: none;
+    pointer-events: all;
+}
+
+/* Style the dots by assigning a fill and stroke */
+.dot {
+    fill: #ffab00;
+    stroke: #fff;
+}
+    
+.focus circle {
+    fill: none;
+    stroke: rgb(71, 129, 177);
+}
+    
+
+.y-axis-price text {
+    fill: #1f77b4;
+}
+
+#y-axis-price-label {
+    fill: #1f77b4;
+    font: 12px Arial;
+    font-weight: bold;
+}
+
+.y-axis-sentiment text {
+    fill: #ff7f0e;
+}
+
+#y-axis-sentiment-label {
+    fill: #ff7f0e;
+    font: 12px Arial;
+    font-weight: bold;
+}
